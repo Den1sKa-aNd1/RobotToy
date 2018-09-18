@@ -1,0 +1,119 @@
+body {
+    line-height: 1;
+}
+html {
+    box-sizing: border-box;
+}
+#root {
+    font-size: 1em;
+    background-size: cover;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+}
+.app {
+    max-width: 600px;
+}
+.start-location input {
+    margin-left: 10px;
+    width: 70px;
+}
+.control-panel {
+    position: relative;
+    background-color: #ff5202dc;
+    color: #fff;
+    margin: 20px 0;
+    padding: 10px;
+    text-align: left;
+}
+.control-panel label {
+    font-size: 1rem;
+    opacity: .5;
+}
+.control-panel .commands {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+    margin-top: 10px;
+}
+.control-panel button {
+    font-size: 1rem;
+    background-color: #BF360C;
+    color: #fff;
+    border-radius: 2px;
+    border: none;
+    padding: 5px 0;
+}
+.control-panel button.cta {
+    background-color: #33691E;
+}
+.control-panel input[type="text"] {
+    padding: 5px;
+    background-color: #fff;
+    color: #000;
+    font-size: 1rem;
+    letter-spacing: 2pt;
+    width: 450px
+}
+.table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    margin: 0px;
+    padding: 0;
+}
+.square {
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background-color: #0059ff;
+    min-height: 70px;
+}
+.square label {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #fff;
+}
+.square.end {
+    background-color: #4CAF50;
+}
+.square.error {
+    background-color: #f44336;
+}
+.robot {
+    font-size: 3rem;
+    z-index: 1;
+}
+.robot.S {
+    transform: rotate(180deg);
+}
+.robot.W {
+    transform: rotate(270deg);
+}
+.robot.N {
+    transform: rotate(0deg);
+}
+.robot.E {
+    transform: rotate(90deg);
+}
+.controls {
+    display: grid;
+    grid-template-columns: .5fr 3fr 1fr;
+    grid-column-gap: 10px;
+    margin-top: 20px;
+}
+.messages{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: white;
+    color: red;
+    text-align: center;
+}
+.robotMessage{
+    border: 1px solid lightslategray;
+    margin: 5px;
+    padding: 10px;
+}
