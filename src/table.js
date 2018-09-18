@@ -49,8 +49,8 @@ class Table extends React.Component {
         else if (op === "R") newLocation = this.turnRight();
         else if (op === "M") newLocation = this.moveForward();
         else if (op === "P") this.printPosition(location, direction);
-        else console.log("Invalid command");
-        if (newLocation.error) console.log('error move');
+        else this.printRobotMessage("Invalid command");
+        if (newLocation.error) this.printRobotMessage('error move');
         this.setState(Object.assign(this.state, { operation, path, ...newLocation }), () => {
             if (this.state.operation.length > 0) setTimeout(this.runSequence.bind(this), 250);
             else this.setState({ end: this.state.location })
@@ -86,6 +86,9 @@ class Table extends React.Component {
     };
     printPosition = (location, direction) => {
         this.setState({ ...this.state, robotReportMessage: 'Location: ' + location + ', direction: ' + direction })
+    }
+    printRobotMessage = (message) => {
+        this.setState({ ...this.state, robotReportMessage: message })
     }
     render() {
         const { size } = this.props;
